@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+<script type="text/javascript">
+ 
+	function reloj() {
+	    var hoy=new Date(); var h=hoy.getHours(); var m=hoy.getMinutes(); var s=hoy.getSeconds();
+	    m = actualizarHora(m);    s = actualizarHora(s);
+	    document.getElementById('displayReloj').innerHTML = h+":"+m+":"+s;
+	    var t = setTimeout(function(){reloj()},500);
+	}
+ 
+	function actualizarHora(i) {
+	    if (i<10) {i = "0" + i};  // Añadir el cero en números menores de 10
+	    return i;
+	}
+</script>
+ 
+</script></head>
+<body onload="reloj()" >
+	<div style="text-align:center;">
+		<div id="cabecera"><h2>Cursos aprenderaprogramar.com</h2><h3>Ejemplos JavaScript</h3></div>
+		<div style="color:blue; font-family: verdana, arial; font-size:30px; padding:15px;" id ="displayReloj" > &nbsp; </div>
+	</div>
+</body></html>

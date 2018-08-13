@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><head><title>Ejemplo Timer</title><meta charset="utf-8">
+<script type="text/javascript">
+    var n = 0;
+    var nn = 0;
+    var seg = 60;
+    var min = 1;
+    
+    //var t = 0;
+
+   
+	function reloj() {
+		//var t = 0;
+	    var hoy=new Date(); 
+	    var h=hoy.getHours(); 
+	    var m=hoy.getMinutes(); 
+	    var s=hoy.getSeconds();
+	    m = actualizarHora(m); 
+	    s = actualizarHora(s);
+	    n = n + 1;
+	    
+	    seg = seg - 1 
+	    // document.getElementById('fecha').innerHTML = hoy;
+
+	    if (n > 60){
+	    	n = 0;
+	    	nn = nn + 1;// minutos
+	    	t = t + 1;
+	    	seg = 60;
+	    	min = min - 1;
+
+            // Minutos
+	    	if (nn >= 2) {
+	    		alert("Fin : " + nn);
+	    		exit();
+	    	}
+	    	//***********************
+	    }
+
+	    //document.getElementById('displayReloj').innerHTML = h + ":" + m + ":" + n;
+	    //document.getElementById('displayReloj').innerHTML = h + ":" + nn + ":" + n;
+	    document.getElementById('displayReloj').innerHTML = h + ":" + min + ":" + seg;
+	    var t = setTimeout(function(){reloj()},1000);
+	}
+ 
+	function actualizarHora(i) {
+	    if (i < 10) {
+	       i = "0" + i
+	    };  // Añadir el cero en números menores de 10
+	    return i;
+	}
+
+	</script>
+ 
+</script></head>
+<body onload="reloj()" >
+	<div style="text-align:center;">
+	    <!-- <div style="color:blue; font-family: verdana, arial; font-size:30px; padding:15px;" id ="fecha" > &nbsp; </div> -->
+	    <!-- <input type = "text" name="fecha" id="fecha" > -->
+		<div id="cabecera"><h2>XXXXXXXX</h2><h3>Ejemplos JavaScript</h3></div>
+		<div style="color:blue; font-family: verdana, arial; font-size:30px; padding:15px;" id ="displayReloj" > &nbsp; </div>
+	</div>
+
+</body></html>

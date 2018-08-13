@@ -1,0 +1,31 @@
+select * from poll.questions a  LEFT JOIN poll.answers b 
+    ON a.id = b.question_id
+-- where a.group_name IS NULL
+
+Dos Formas
+
+1.- 
+
+$c = Question::leftJoin('answers', function($join) {
+      $join->on('questions.id', '=', 'answers.question_id');
+    })
+    ->whereNull('answers.question_id')
+    ->first([
+        'questions.id',
+        'questions.name',
+        'questions.poll_id',
+        'questions.multiple_answers',
+        'questions.group_name',
+        'questions.group_number',
+        'questions.created_at',
+        'questions.updated_at'
+        
+    ]);
+
+2)
+
+$c = Question::select('*', DB::raw('questions.id AS id, questions.first_name AS first_name, questions.last_name AS last_name'))
+->leftJoin('answers', function($join) {
+  $join->on('questions.id', '=', 'answers.customer_id') 
+})->whereNull('answers.question_id')->first();
+

@@ -1,0 +1,10 @@
+Cosas por hacer:
+
+-adecuar el crud de preguntas y respuestas para q se vea en una sola pagina
+-modulo de rangos debe detectar el puntaje maximo posible
+-boton para publicar encuesta {debe tener rango y al menos 1 pregunta definidas}
+-encuestas donde cada pregunta tenga tiempo
+-darle estilo al pagineo
+-regresar entre preguntas, en encuestas que muestran una sola pregunta 
+-Crud de administradores
+-Estadisticas de las encuestas

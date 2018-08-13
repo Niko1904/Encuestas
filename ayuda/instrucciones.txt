@@ -1,0 +1,39 @@
+php artisan migrate:refresh --seed
+
+-en el index de encuestas mostrar el numero de personas q han aplicado la encuesta
+-boton para abrir o cerrar la encuesta
+-usar iconos en los botones
+-boton para ver el reporte de una encuesta
+-login social
+-rango de encuesta decreciente
+-agregar etiketas
+-filtrar por categoria
+
+ok, porbando push
+
+190.202.15.194
+
+VPS Rodolfo:
+-------------------
+Ubuntu 17
+
+Postgresql 9.6
+---------------------
+Usuario: postgres
+Password: yui.yt6:fff360
+
+MariaDB 10
+-----------------
+Ususario: root
+Password: yui.yt6:fff360
+http://190.202.15.194:8000/phpmyadmin
+
+SSH y ftp:
+---------------
+Usuario: ubuntu
+Password: yui.yt6:fff360
+Puerto SSH: 30419
+
+WebSite:
+-------------
+http://190.202.15.194:8000
